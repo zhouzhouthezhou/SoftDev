@@ -1,5 +1,5 @@
 #!/bin/bash
-#Authors : Your Name & Your partner's name
+#Authors : Kyle Zhou
 # Date: 1/1/2019
 
 #Problem 1 Code:
