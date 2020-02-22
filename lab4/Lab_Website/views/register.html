@@ -10,6 +10,17 @@
     <!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	<link href="../resources/css/my_style.css" rel="stylesheet">
+
+	<script>
+		function viewStudentStatus(id, toggle){
+			var x = document.getElementById(id);
+			if(toggle == 0){
+				x.style.visibility = "visible";
+			}else{
+				x.style.visibility = "hidden";
+			}
+		}
+	</script>
   </head>
   <body>
 	
@@ -42,7 +53,7 @@
 					<label for="accntEmail">Email address</label>
 					<input type="email" class="form-control" id="accntEmail" aria-describedby="emailHelp" placeholder="Enter email">
 				</div>
-				<div class="form-group">
+				<div class="form-groupii">
 					<label for="accntPassword">Password</label>
 					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 				</div>
