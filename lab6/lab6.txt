@@ -1,0 +1,34 @@
+Kyle Zhou
+
+create table unis(
+	uniName varchar(200) primary key,
+	dateEst date,
+	address text,
+	studentPop int,
+	acceptanceRate decimal
+);
+
+insert into unis(uniName, dateEst, address, studentPop, acceptanceRate) values ('CU Boulder', '18760101', '110 28th St, Boulder, CO 80303', 35000, 0.8);
+
+select name,major from football_players order by major;
+
+select name,rushing_yards from football_players where rushing_yards >= 70;
+
+select * from football_games where home_score > visitor_score;
+
+select visitor_name,game_date from football_games where game_date >= '2019-09-28' and game_date <= '2019-11-30';
+
+select avg(home_score) from football_games;
+
+select major,count(*) from football_players group by major;
+
+select count(*) from (select * from football_games where home_score > visitor_score) as numWins;
+
+select count(*) from (select * from football_games) as numGamesPlayed
+
+select ((select count(*) from (select * from football_games where home_score > visitor_score) as numWins) * 1.0/(select count(*) from (select * from football_games) as numGamesPlayed)*100) as winPercent;
+
+select count(football_games.*) from football_players inner join football_games on football_players.id = any(football_games.players) where football_players.id = 1;
+
+select (1.0 * (select rushing_yards from football_players where id=1))/(select count(football_games.*) from football_players inner join football_games on football_players.id = any(football_games.players) where football_players.id = 1) as avgRushYards;
+
